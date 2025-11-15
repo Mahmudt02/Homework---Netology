@@ -9,7 +9,7 @@ int main() {
    
 
     
-    std::cout << "\nÎïåğàòîğ: || (Ëîãè÷åñêîå ÈËÈ)" << std::endl;
+    std::cout << "\nĞĞ¿ĞµÑ€Ğ°Ñ‚Ğ¾Ñ€: || (Ğ›Ğ¾Ğ³Ğ¸Ñ‡ĞµÑĞºĞ¾Ğµ Ğ˜Ğ›Ğ˜)" << std::endl;
     std::cout << "A\tB\tA || B" << std::endl;
     std::cout << "--------------------" << std::endl;
 
@@ -25,7 +25,7 @@ int main() {
     std::cout << false << "\t" << false << "\t" << (false || false) << std::endl;
 
    
-    std::cout << "\nÎïåğàòîğ: && (Ëîãè÷åñêîå È)" << std::endl;
+    std::cout << "\nĞĞ¿ĞµÑ€Ğ°Ñ‚Ğ¾Ñ€: && (Ğ›Ğ¾Ğ³Ğ¸Ñ‡ĞµÑĞºĞ¾Ğµ Ğ˜)" << std::endl;
     std::cout << "A\tB\tA && B" << std::endl;
     std::cout << "--------------------" << std::endl;
 
