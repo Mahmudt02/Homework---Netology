@@ -1,44 +1,25 @@
 #include <iostream>
-#include <iomanip>
-#include <clocale>
-
+#include <locale> 
 int main() {
   
-    std::cout << std::boolalpha;
-    std::setlocale(LC_ALL, "Russian");
-   
+    std::setlocale(LC_ALL,"Russian");
 
-    
-    std::cout << "\nОператор: || (Логическое ИЛИ)" << std::endl;
-    std::cout << "A\tB\tA || B" << std::endl;
-    std::cout << "--------------------" << std::endl;
-
-   
-    std::cout << true << "\t" << true << "\t" << (true || true) << std::endl;
-
-    
-    std::cout << false << "\t" << true << "\t" << (false || true) << std::endl;
-
+    int number;
   
-    std::cout << true << "\t" << false << "\t" << (true || false) << std::endl;
+    int sum = 0;
 
-    std::cout << false << "\t" << false << "\t" << (false || false) << std::endl;
-
-   
-    std::cout << "\nОператор: && (Логическое И)" << std::endl;
-    std::cout << "A\tB\tA && B" << std::endl;
-    std::cout << "--------------------" << std::endl;
-
+    std::cout << "Введите целое число или число '0', чтобы закончить:\n";
+    std::cin >> number;
     
-    std::cout << true << "\t" << true << "\t" << (true && true) << std::endl;
+    while (number != 0) {
+       
+        sum = sum + number;
 
+        std::cout << "Введите целое число или число '0', чтобы закончить:\n";
+        std::cin >> number;
+    }
     
-    std::cout << false << "\t" << true << "\t" << (false && true) << std::endl;
-
-    std::cout << true << "\t" << false << "\t" << (true && false) << std::endl;
-
-  
-    std::cout << false << "\t" << false << "\t" << (false && false) << std::endl;
+    std::cout << "Сумма: " << sum << std::endl;
 
     return 0;
 }
