@@ -1,58 +1,33 @@
 #include <iostream>
-#include <clocale>
+#include <locale> 
 
 int main() {
-
+    
     std::setlocale(LC_ALL, "Russian");
 
-    int A, B, C;
+    int number; 
+    int originalNumber;
+    int sum = 0;
+
+    std::cout << "Введите целое число:\n";
+    std::cin >> number;
+ 
+    originalNumber = number;
+
+    while (number > 0) {
+
+     
+        int lastDigit = number % 10;
 
    
-    std::cout << "Введите первое число: ";
-    std::cin >> A;
-    std::cout << "Введите второе число: ";
-    std::cin >> B;
-    std::cout << "Введите третье число: ";
-    std::cin >> C;
-
-    std::cout << "\nРезультат: ";
-
- 
-    if (A >= B && A >= C) {
-        std::cout << A << " ";
-
+        sum = sum + lastDigit;
        
-        if (B >= C) {
-            std::cout << B << " " << C << std::endl; 
-        }
-        else {
-            std::cout << C << " " << B << std::endl; 
-        }
-    }
-    
-    else if (B >= A && B >= C) {
-        std::cout << B << " "; 
-
         
-        if (A >= C) {
-            std::cout << A << " " << C << std::endl; 
-        }
-        else {
-            std::cout << C << " " << A << std::endl; 
-        }
+        number = number / 10;
+      
     }
-  
-    else {
-        std::cout << C << " "; 
 
-        
-        if (A >= B) {
-            std::cout << A << " " << B << std::endl; 
-        }
-        else {
-            std::cout << B << " " << A << std::endl; 
-        }
-    }
+    std::cout << "Сумма цифр: " << sum << std::endl;
 
     return 0;
 }
