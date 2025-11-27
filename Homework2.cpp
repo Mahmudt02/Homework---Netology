@@ -1,33 +1,42 @@
 #include <iostream>
-#include <locale> 
+#include <limits> 
+#include <locale>
 
 int main() {
     
     std::setlocale(LC_ALL, "Russian");
 
-    int number; 
-    int originalNumber;
-    int sum = 0;
+    int array[10] = { 15, -3, 8, 20, 1, 9, 0, -10, 5, 12 };
+    const int SIZE = 10;
 
-    std::cout << "Введите целое число:\n";
-    std::cin >> number;
+    
+    std::cout << "Массив: ";
+    for (int i = 0; i < SIZE; ++i) {
+        std::cout << array[i] << " ";
+    }
+    std::cout << std::endl;
+
  
-    originalNumber = number;
 
-    while (number > 0) {
-
-     
-        int lastDigit = number % 10;
+    int min_element = array[0];
+    int max_element = array[0];
 
    
-        sum = sum + lastDigit;
+    for (int i = 1; i < SIZE; ++i) {
+     
+        if (array[i] < min_element) {
+            min_element = array[i]; 
+        }
+
        
-        
-        number = number / 10;
-      
+        if (array[i] > max_element) {
+            max_element = array[i]; 
+        }
     }
 
-    std::cout << "Сумма цифр: " << sum << std::endl;
+   
+    std::cout << "Минимальный элемент: " << min_element << std::endl;
+    std::cout << "Максимальный элемент: " << max_element << std::endl;
 
     return 0;
 }
