@@ -1,25 +1,23 @@
+
 #include <iostream>
-#include <locale> 
+#include <vector> 
+
 int main() {
-  
-    std::setlocale(LC_ALL,"Russian");
+   
+    int array[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-    int number;
-  
-    int sum = 0;
-
-    std::cout << "Введите целое число или число '0', чтобы закончить:\n";
-    std::cin >> number;
     
-    while (number != 0) {
+    for (int i = 0; i < 10; ++i) {
        
-        sum = sum + number;
+        std::cout << array[i];
 
-        std::cout << "Введите целое число или число '0', чтобы закончить:\n";
-        std::cin >> number;
+        if (i < 9) {
+            std::cout << ", ";
+        }
     }
-    
-    std::cout << "Сумма: " << sum << std::endl;
+
+ 
+    std::cout << std::endl;
 
     return 0;
 }
