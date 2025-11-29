@@ -1,23 +1,41 @@
-
 #include <iostream>
-#include <vector> 
 
-int main() {
+
+int sum(int a, int b) {
+    return a + b;
+}
+
+
+int diff(int a, int b) {
+    return a - b;
+}
+
+
+int multiplication(int a, int b) {
+    return a * b;
+}
+
+double division(int a, int b) {
+    
+    return (double)a / b;
+}
+
+int main(int argc, char** argv)
+{
    
-    int array[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    int a = 5, b = 10;
 
     
-    for (int i = 0; i < 10; ++i) {
-       
-        std::cout << array[i];
+    int s = sum(a, b);
+    int diff_val = diff(a, b); 
+    int mult = multiplication(a, b);
+    double div = division(a, b);
 
-        if (i < 9) {
-            std::cout << ", ";
-        }
-    }
-
- 
-    std::cout << std::endl;
+    
+    std::cout << a << " + " << b << " = " << s << std::endl;
+    std::cout << a << " - " << b << " = " << diff_val << std::endl;
+    std::cout << a << " * " << b << " = " << mult << std::endl;
+    std::cout << a << " / " << b << " = " << div << std::endl;
 
     return 0;
 }
