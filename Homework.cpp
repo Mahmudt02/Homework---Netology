@@ -1,41 +1,23 @@
 #include <iostream>
+#include <locale>
+
+void counting_function() {
+    std::setlocale(LC_ALL, "Russian");
+    static int count = 0;
 
 
-int sum(int a, int b) {
-    return a + b;
-}
+    count++;
 
-
-int diff(int a, int b) {
-    return a - b;
-}
-
-
-int multiplication(int a, int b) {
-    return a * b;
-}
-
-double division(int a, int b) {
-    
-    return (double)a / b;
+   
+    std::cout << "Количество вызовов функции counting_function(): " << count << std::endl;
 }
 
 int main(int argc, char** argv)
 {
-   
-    int a = 5, b = 10;
-
-    
-    int s = sum(a, b);
-    int diff_val = diff(a, b); 
-    int mult = multiplication(a, b);
-    double div = division(a, b);
-
-    
-    std::cout << a << " + " << b << " = " << s << std::endl;
-    std::cout << a << " - " << b << " = " << diff_val << std::endl;
-    std::cout << a << " * " << b << " = " << mult << std::endl;
-    std::cout << a << " / " << b << " = " << div << std::endl;
+    for (int i = 0; i < 10; i++)
+    {
+        counting_function();
+    }
 
     return 0;
 }
